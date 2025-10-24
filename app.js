@@ -9,7 +9,7 @@ import rateLimiter from "./middlewares/rate-limiter.js"
 const app = express();
 app.use(express.json()); // Middleware pour parser le JSON dans les requêtes
 
-app.use(cors({ origin: "*", credentials: true })); // Middleware pour activer CORS
+app.use(cors({ origin: "https://portfolio-flckes-projects.vercel.app", credentials: true })); // Middleware pour activer CORS
 app.use(rateLimiter);
 
 app.get("/", (req, res) => {
