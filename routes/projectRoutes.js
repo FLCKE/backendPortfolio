@@ -17,11 +17,11 @@ import auth from "../middlewares/auth.js";
 
 const router = express.Router();
 
-router.get("/",auth, listProjects);
+router.get("/", listProjects);
 router.get("/:id", getProject);
-router.post("/",auth, createProject);
-router.post("/upload",auth, upload.single("image"), createProjectWithUpload);
-router.put("/:id",auth, updateProject);
-router.delete("/:id",auth, deleteProject);
+router.post("/", auth, createProject);
+router.post("/upload", auth, upload.single("image"), createProjectWithUpload);
+router.put("/:id", auth, updateProject);
+router.delete("/:id", auth, deleteProject);
 
 export default router;
